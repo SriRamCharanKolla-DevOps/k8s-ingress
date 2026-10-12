@@ -50,14 +50,15 @@ metadata:
     alb.ingress.kubernetes.io/target-type: ip
     alb.ingress.kubernetes.io/group.name: roboshop
 spec:
+  ingressClassName: alb
   rules:
-  -  host: "app1.aitechapp.fun"
-     http:
-     paths:
-     - pathType: Prefix
-     path: "/"
-     backend:
-       service:
-         name: app1
-         port:
-           number: 80 
+  - host: "app1.aitechapp.fun"
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: app1
+            port:
+              number: 80
