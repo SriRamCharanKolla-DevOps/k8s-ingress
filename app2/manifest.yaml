@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: app2
-        image: ramcharankola2/app2:1.0.0
+        image: ramcharankola2/app1:1.0.0
 ---
 apiVersion: v1
 kind: Service
